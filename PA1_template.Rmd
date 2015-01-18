@@ -4,7 +4,6 @@ title: "Report of Peer1 Assignment"
 
 ```{r setup, include=FALSE}
 options(scipen = 100, digits = 2)
-#knitr::opts_chunk$set(cache=TRUE)
 ```
 
 ### Loading and preprocessing the data  
@@ -38,8 +37,8 @@ meansteps = mean(stepsDay$steps)
 mediansteps = median(stepsDay$steps)
 
 ```
-*The mean steps taken per day is **`r meansteps`***  
-*The median steps taken per day is **`r mediansteps`***   
+*The mean steps taken per day is `r meansteps`*  
+*The median steps taken per day is `r mediansteps`*   
 
 ### What is the average daily activity pattern?  
 
@@ -56,7 +55,7 @@ plot(aveStepsInterval$interval,aveStepsInterval$steps,type = 'l', main = 'Time S
 ```{r, echo=TRUE, cache=TRUE}
 intMaxNumSteps = aveStepsInterval[which.max(aveStepsInterval$steps),1]
 ```
-*The 5 min. interval with most steps is on average: **`r intMaxNumSteps`***
+*The 5 min. interval with most steps is on average: `r intMaxNumSteps`*  
 
 ### Imputing missing values  
 
@@ -65,7 +64,7 @@ intMaxNumSteps = aveStepsInterval[which.max(aveStepsInterval$steps),1]
 ```{r, echo=TRUE, cache=TRUE}
 totalMissing = sum(is.na(activity$steps))
 ```
-*Total number of missing values is: **`r totalMissing`***
+*Total number of missing values is: `r totalMissing`*
 
 2. Devise a strategy for filling in all of the missing values in the dataset.  
 *I will use the mean of the 5 minute interval across all days for that 5 min. interval. This utilizes previously calculated vector*
@@ -89,9 +88,9 @@ meansteps2 = mean(stepsDay2$steps)
 mediansteps2 = median(stepsDay2$steps)
 
 ```
-*The mean steps taken per day is **`r meansteps2`***  
-*The median steps taken per day is **`r mediansteps2`***  
-*These hardly differ from the original estimates. There is little impact when imputing the missing data with this strategy e.g. there is a very slight change in median steps: **`r mediansteps2-mediansteps`** more steps and one bin in the histogram (10000-15000 steps) is notably higher.*  
+*The mean steps taken per day is `r meansteps2`*  
+*The median steps taken per day is `r mediansteps2`*  
+*These hardly differ from the original estimates. There is little impact when imputing the missing data with this strategy e.g. there is a very slight change in median steps: `r mediansteps2-mediansteps` more steps and one bin in the histogram (10000-15000 steps) is notably higher.*  
 
 ### Are there differences in activity patterns between weekdays and weekends?  
 

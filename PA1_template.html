@@ -237,8 +237,8 @@ hist(stepsDay$steps,main = &#39;Histogram of Total Steps / Day&#39;, xlab = &#39
 mediansteps = median(stepsDay$steps)
 </code></pre>
 
-<p><em>The mean steps taken per day is **10766.19</em>**<br/>
-<em>The median steps taken per day is **10765</em>**   </p>
+<p><em>The mean steps taken per day is 10766.19</em><br/>
+<em>The median steps taken per day is 10765</em>   </p>
 
 <h3>What is the average daily activity pattern?</h3>
 
@@ -260,7 +260,7 @@ plot(aveStepsInterval$interval,aveStepsInterval$steps,type = &#39;l&#39;, main =
 <pre><code class="r">intMaxNumSteps = aveStepsInterval[which.max(aveStepsInterval$steps),1]
 </code></pre>
 
-<p><em>The 5 min. interval with most steps is on average: **835</em>**</p>
+<p><em>The 5 min. interval with most steps is on average: 835</em>  </p>
 
 <h3>Imputing missing values</h3>
 
@@ -271,7 +271,7 @@ plot(aveStepsInterval$interval,aveStepsInterval$steps,type = &#39;l&#39;, main =
 <pre><code class="r">totalMissing = sum(is.na(activity$steps))
 </code></pre>
 
-<p><em>Total number of missing values is: **2304</em>**</p>
+<p><em>Total number of missing values is: 2304</em></p>
 
 <ol>
 <li><p>Devise a strategy for filling in all of the missing values in the dataset.<br/>
@@ -298,9 +298,9 @@ hist(stepsDay2$steps,main = &#39;Histogram of Total Steps (Imputed) / Day&#39;, 
 mediansteps2 = median(stepsDay2$steps)
 </code></pre>
 
-<p><em>The mean steps taken per day is **10766.19</em>**<br/>
-<em>The median steps taken per day is **10766.19</em>**<br/>
-<em>These hardly differ from the original estimates. There is little impact when imputing the missing data with this strategy e.g. there is a very slight change in median steps: **1.19</em>* more steps and one bin in the histogram (10000-15000 steps) is notably higher.*  </p>
+<p><em>The mean steps taken per day is 10766.19</em><br/>
+<em>The median steps taken per day is 10766.19</em><br/>
+<em>These hardly differ from the original estimates. There is little impact when imputing the missing data with this strategy e.g. there is a very slight change in median steps: 1.19 more steps and one bin in the histogram (10000-15000 steps) is notably higher.</em>  </p>
 
 <h3>Are there differences in activity patterns between weekdays and weekends?</h3>
 

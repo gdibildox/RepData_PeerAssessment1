@@ -37,8 +37,8 @@ hist(stepsDay$steps,main = 'Histogram of Total Steps / Day', xlab = 'total steps
 meansteps = mean(stepsDay$steps)
 mediansteps = median(stepsDay$steps)
 ```
-*The mean steps taken per day is **10766.19***  
-*The median steps taken per day is **10765***   
+*The mean steps taken per day is 10766.19*  
+*The median steps taken per day is 10765*   
 
 ### What is the average daily activity pattern?  
 
@@ -59,7 +59,7 @@ plot(aveStepsInterval$interval,aveStepsInterval$steps,type = 'l', main = 'Time S
 ```r
 intMaxNumSteps = aveStepsInterval[which.max(aveStepsInterval$steps),1]
 ```
-*The 5 min. interval with most steps is on average: **835***
+*The 5 min. interval with most steps is on average: 835*  
 
 ### Imputing missing values  
 
@@ -69,7 +69,7 @@ intMaxNumSteps = aveStepsInterval[which.max(aveStepsInterval$steps),1]
 ```r
 totalMissing = sum(is.na(activity$steps))
 ```
-*Total number of missing values is: **2304***
+*Total number of missing values is: 2304*
 
 2. Devise a strategy for filling in all of the missing values in the dataset.  
 *I will use the mean of the 5 minute interval across all days for that 5 min. interval. This utilizes previously calculated vector*
@@ -97,9 +97,9 @@ hist(stepsDay2$steps,main = 'Histogram of Total Steps (Imputed) / Day', xlab = '
 meansteps2 = mean(stepsDay2$steps)
 mediansteps2 = median(stepsDay2$steps)
 ```
-*The mean steps taken per day is **10766.19***  
-*The median steps taken per day is **10766.19***  
-*These hardly differ from the original estimates. There is little impact when imputing the missing data with this strategy e.g. there is a very slight change in median steps: **1.19** more steps and one bin in the histogram (10000-15000 steps) is notably higher.*  
+*The mean steps taken per day is 10766.19*  
+*The median steps taken per day is 10766.19*  
+*These hardly differ from the original estimates. There is little impact when imputing the missing data with this strategy e.g. there is a very slight change in median steps: 1.19 more steps and one bin in the histogram (10000-15000 steps) is notably higher.*  
 
 ### Are there differences in activity patterns between weekdays and weekends?  
 
